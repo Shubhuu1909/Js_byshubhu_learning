@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+
+
+
+    
+
+    <button onclick="decr()">-</button>
+    <span id ="cont">ADD</span>
+    <button onclick="incr()">+</button>
+    <button onclick="reset()">Reset</button>
+
+
+    
+    <script>
+    let count =0;
+    let res =document.getElementById("cont");
+
+    function update(){
+        res.textContent=count;    }
+
+    function incr (){
+        if(count<=10){
+            count++;
+           update()
+        }
+        else {
+            alert("max limit is 10");
+        }
+        
+    }
+
+
+    function decr (){
+        if(count>0){
+            count--; 
+            update()
+
+        }
+        
+    }
+    function reset (){
+        count =0;
+        update()
+    }
+
+
+    </script>
+
+
+    
+    
+</body>
+
+
+</html>
